@@ -156,6 +156,7 @@ I noticed wget is present, and I confirmed it worked by using the command inject
 pic here
 
 So I thought, I'll just pop that off so I can see specifically what the processor is. I did that and found it was a RaLink (which should have been obvious because I saw Ralink the UART prompt previously):
+<img src="https://github.com/maguireja/Trendnet/blob/main/IMG_3999.png?raw=true">
 
 # Bummer
 With the specific model number for the processor I did some research. It's a MIPS processor, and so any binary I compile would need to be MIPS. This led me down a rabbit hole researching cross compiling, and trying to find shells or mips backdoors other people have created. I did find an interesting one here that was created for a trendnet switch: https://osandamalith.com/2015/10/11/how-to-turn-your-switch-into-a-snitch/
