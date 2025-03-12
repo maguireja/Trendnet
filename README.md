@@ -3,7 +3,8 @@ Notes for TrendNet AP
 
 
 # Locating UART
-I found an area on the board that looked like UART, with a multimeter I found what I think is ground, Send and Recieve
+I found an area on the board that looked like UART, with a multimeter I found what I think is ground, Send and Recieve:
+<img src=https://github.com/maguireja/Trendnet/blob/main/IMG_3994.png?raw=true>
 
 # Testing UART
 I hooked up my flipper zero and connect like normal, after playing around with different baud rates it seems like to 57600.
