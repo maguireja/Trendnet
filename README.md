@@ -153,7 +153,7 @@ It doesn't look like theres much to work with, and nc missing so any netcat shel
 
 # Bring my own binary?
 I noticed wget is present, and I confirmed it worked by using the command injection to download a txt file from my laptop. So I thought maybe I can just compile a version of netcat for the AP, then use wget to retrieve it.  While looking at the board I noticed there was a piece of metal (a heatsink?) on top of the processor:
-pic here
+<img src="https://github.com/maguireja/Trendnet/blob/main/IMG_3957%201.png?raw=true">
 
 So I thought, I'll just pop that off so I can see specifically what the processor is. I did that and found it was a RaLink (which should have been obvious because I saw Ralink the UART prompt previously):
 <img src="https://github.com/maguireja/Trendnet/blob/main/IMG_3999.png?raw=true">
