@@ -155,11 +155,11 @@ It doesn't look like theres much to work with, and nc missing so any netcat shel
 I noticed wget is present, and I confirmed it worked by using the command injection to download a txt file from my laptop. So I thought maybe I can just compile a version of netcat for the AP, then use wget to retrieve it.  While looking at the board I noticed there was a piece of metal (a heatsink?) on top of the processor:
 <img src="https://github.com/maguireja/Trendnet/blob/main/IMG_3957%201.png?raw=true">
 
-So I thought, I'll just pop that off so I can see specifically what the processor is. I did that and found it was a RaLink (which should have been obvious because I saw Ralink the UART prompt previously):
+So I thought, I'll just pop that off so I can see what the specific processor is. I did that and found it was a Ralink (which should have been obvious because I saw Ralink the UART prompt previously):
 <img src="https://github.com/maguireja/Trendnet/blob/main/IMG_3999.png?raw=true">
 
 # Bummer
-With the specific model number for the processor I did some research. It's a MIPS processor, and so any binary I compile would need to be MIPS. This led me down a rabbit hole researching cross compiling, and trying to find shells or mips backdoors other people have created. I did find an interesting one here that was created for a trendnet switch: https://osandamalith.com/2015/10/11/how-to-turn-your-switch-into-a-snitch/
+With the model number for the processor I did some research. It's a MIPS processor, so any binary I compile would need to be MIPS. This led me down a rabbit hole researching cross compiling, and trying to find shells or mips backdoors other people have created. I did find an interesting one here that was created for a trendnet switch: https://osandamalith.com/2015/10/11/how-to-turn-your-switch-into-a-snitch/
 
 I was excited to try this out, I started by compiling a simple hello world binary. I got everything ready and then..... 
 
