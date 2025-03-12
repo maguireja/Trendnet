@@ -1,6 +1,6 @@
 # Trendnet
-Notes for TrendNet AP
-
+I found a brand new (still sealed!) TrendNet TEW-653 AP at a local thrift store for $4.99
+<img src="https://github.com/maguireja/Trendnet/blob/main/IMG_3809.png?raw=true">
 
 # Locating UART
 I found an area on the board that looked like UART, with a multimeter I found what I think is ground, Send and Recieve:
