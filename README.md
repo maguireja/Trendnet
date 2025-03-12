@@ -86,7 +86,7 @@ While connected to the UART, I continued to test the ping functionality. While p
 ```
 I noticed the following in the UART console:
 ```
-ping bad address: uid=0
+ping bad address uid=0
 ```
 
 This confirmed there is in fact a command injection, I can see in the UART console log that the _id_ command did execute. it appears the output from the _id_ command was fed into the ping command.
