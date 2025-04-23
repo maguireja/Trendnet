@@ -7,7 +7,7 @@ I found an area on the board that looked like UART, with a multimeter I found wh
 <img src="https://github.com/maguireja/Trendnet/blob/main/IMG_3994.png?raw=true">
 
 # Testing UART
-I hooked up my flipper zero and connect like normal, after playing around with different baud rates it seems like to 57600.
+I hooked up my flipper zero and connected like normal, after playing around with different baud rates it seems like to 57600.
 ```
 U-boot Ver:1.0.1.30 2009/10/12
 
@@ -90,10 +90,10 @@ I noticed the following in the UART console:
 ping bad address uid=0
 ```
 
-This confirmed there is in fact a command injection, I can see in the UART console log that the _id_ command did execute. it appears the output from the _id_ command was fed into the ping command.
+This confirmed there is in fact a command injection flaw, I can see in the UART console log that the _id_ command did execute. it appears the output from the _id_ command was fed into the ping command.
 
 # Trying for a shell
-After confirming the command injection, I wanted to get a shell on the device. I tried many different payloads, but nothing was working and the limited output of the UART console was making it hard to tell what exactly was failing. I thought it would be helpful to know what applets were on this busybox, and if netcat was present at all. So I made a wordlist of all busybox applets from here: https://busybox.net/downloads/BusyBox.html I then used BurpSuite's Intruder to send each applet inside my command injection payload, and logged the UART shell output. I found the following applets installed:
+After confirming the command injection, I wanted to get a shell on the device. I tried many different payloads, but nothing was working and the limited output of the UART console was making it hard to tell what exactly was failing. I thought it would be helpful to know what applets were on this version of busybox, and if netcat was present at all. So I made a wordlist of all busybox applets from here: https://busybox.net/downloads/BusyBox.html I then used BurpSuite's Intruder to send each applet inside my command injection payload, and logged the UART shell output. I found the following applets installed:
 ```
 cat binaries.txt       
 ping: bad address 'sbin/arp'
